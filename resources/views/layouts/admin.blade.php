@@ -49,6 +49,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right dropdown_menu" aria-labelledby="navbarDropdown">
+                                <a class="nav-link dropdown-item" href="{{url('/admin') }}">Admin Dashboard</a>
                                 <div class="dropdown_header">Projects</div>
                                 <a class="nav-link dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
                                 <a class="nav-link dropdown-item" href="#">New Project</a>
