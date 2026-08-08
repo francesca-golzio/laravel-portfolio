@@ -1,1 +1,73 @@
 @import '~bootstrap/scss/bootstrap';
+
+/* _ ADMIN _ */
+
+body.admin_style {
+  color: #fbdfde;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0gMTAwMCAwIEMgMTA1MCAyMDAsIDEyMDAgMzUwLCAxMzUwIDQ1MCBDIDE1MDAgNTUwLCAxNjAwIDUwMCwgMTYwMCA1MDAgViAwIEggMTAwMCBaIiBmaWxsPSIjZWYzYjJkIiAvPgogICAgPHBhdGggZD0iTSAwIDQ1MCBDIDE1MCA1MDAsIDI1MCA2NTAsIDM1MCA3NTAgQyA0NTAgODUwLCA1NTAgOTAwLCA1NTAgOTAwIEggMCBWIDQ1MCBaIiBmaWxsPSIjZWYzYjJkIiAvPgo8L3N2Zz4=');
+  background-color: #260906;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.admin_navbar {
+  color: #ef3b2d;
+  background-color: #180604d8;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  button.navbar-toggler:focus {
+    box-shadow: none;
+    background-color: #260906d8; 
+  }
+
+  i.bi-list,
+  h1 {
+    color: #ef3b2d;
+
+    padding-top: 0.5rem;
+    margin-left: 0.15rem;
+    margin-bottom: 0;
+  }
+
+  a.nav-link {
+    color: #fbdfde;
+  }
+
+  .dropdown-menu {
+    background-color: #260906;
+  }
+
+  .dropdown-menu.show {
+    padding-top: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .dropdown {
+    padding: 0.5rem;
+  }
+
+  a.user_menu,
+  .dropdown_header {
+    color: #ef3b2d;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem;
+  }
+
+  .dropdown_header:hover {
+    background-color: none;
+  }
+
+  a.dropdown-item:hover {
+    background-color: #45110C;
+  }
+
+}
+

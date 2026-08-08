@@ -12,10 +12,10 @@
   <!-- Usando Vite -->
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="admin_style">
     
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar admin_navbar navbar-expand-md shadow-sm" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
@@ -30,7 +30,7 @@
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="bi bi-list"></i><!-- <span class="navbar-toggler-icon"></span> -->
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,23 +44,18 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="dropdown-toggle user_menu" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <div class="dropdown-item">
-                                  Projects
-                                  <a class="dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
-                                  <a class="dropdown-item" href="#">New Project</a>
-                                </div>
-                                <div class="dropdown-item" href="{{ url('dashboard') }}">
-                                  Personal Profile
-                                  <a class="dropdown-item" href="{{ url('dashboard') }}">Dashboard</a>
-                                  <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
-                                </div>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                <div class="dropdown_header">Projects</div>
+                                <a class="nav-link dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
+                                <a class="nav-link dropdown-item" href="#">New Project</a>
+                                <div class="dropdown_header" href="{{ url('dashboard') }}">Personal Profile</div>
+                                <a class="nav-link dropdown-item" href="{{ url('dashboard') }}">Dashboard</a>
+                                <a class="nav-link dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
+                                <a class="nav-link dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
