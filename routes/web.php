@@ -26,8 +26,8 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [DashboardController::class, 'index'])
             ->name('index');
 
-        Route::get('/profile', [DashboardController::class, 'profile'])
-            ->name('profile');
+        Route::get('/projects', [DashboardController::class, 'projects'])
+            ->name('projects');
     });
 
 require __DIR__.'/auth.php';
