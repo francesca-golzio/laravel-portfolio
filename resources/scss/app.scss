@@ -10,7 +10,7 @@ body.admin_style {
   background-repeat: no-repeat;
   height: 100vh;
   transition: all 0.5s ease-in-out;
-  
+
 }
 
 header {
@@ -42,7 +42,6 @@ header {
   }
 
   .dropdown-menu.show {
-    padding-top: 0;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border: 0.25px solid #ef3b2d;
