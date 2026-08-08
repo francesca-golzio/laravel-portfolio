@@ -9,6 +9,8 @@ body.admin_style {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  transition: all 0.5s ease-in-out;
+  
 }
 
 header {
@@ -88,13 +90,17 @@ header {
     padding: 0.75rem;
   }
 
+  .dropdown_header {
+    white-space: nowrap;
+  }
+
   .dropdown_header:hover {
     background-color: none;
   }
 
   a.dropdown-item {
     padding: 0.5rem;
-    text-wrap: none;
+    white-space: nowrap;
   }
 
   a.dropdown-item:hover {
