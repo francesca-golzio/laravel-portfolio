@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index() {
-        return 'ciao sono la index';
+        return view('admin/index');
     }
 
-    public function profile() {
-        return 'ciao sono la profile';
+    public function projects() {
+        return view('admin/projects');
     }
 }
