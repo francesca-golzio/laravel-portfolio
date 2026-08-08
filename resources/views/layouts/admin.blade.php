@@ -15,7 +15,7 @@
 <body class="admin_style">
     
     <header>
-        <nav class="navbar admin_navbar navbar-expand-md shadow-sm" data-bs-theme="dark">
+        <nav class="navbar admin_navbar navbar-expand-md" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
@@ -48,7 +48,7 @@
                                 {{ Auth::user()->name }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right dropdown_menu" aria-labelledby="navbarDropdown">
                                 <div class="dropdown_header">Projects</div>
                                 <a class="nav-link dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
                                 <a class="nav-link dropdown-item" href="#">New Project</a>

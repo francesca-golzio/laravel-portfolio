@@ -17,16 +17,52 @@ header {
 
 .admin_navbar {
   color: #ef3b2d;
-  background-color: #180604d8;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+
+  a#navbarDropdown {
+    color: #ef3b2d;
+    background-color: #260906e6;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0.25px solid #ef3b2d;
+    border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
+    margin-bottom: 0.25rem;
+  }
+
+  a#navbarDropdown.show {
+    border: none;
+  }
+
+  .dropdown_menu {
+    background-color: #260906e6;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 0.5rem;
+  }
+
+  .dropdown-menu.show {
+    padding-top: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border: 0.25px solid #ef3b2d;
+  }
 
   button.navbar-toggler:focus {
     box-shadow: none;
-    background-color: #260906d8; 
+    // background-color: #260906e6; 
   }
 
-  i.bi-list,
+  button.navbar-toggler {
+
+    color: #ef3b2d;
+    background-color: #260906e6;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 0.5rem;
+    border: 0.5px solid #ef3b2d;
+    border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
+
+  }
+
   h1 {
     color: #ef3b2d;
 
@@ -39,15 +75,6 @@ header {
     color: #fbdfde;
   }
 
-  .dropdown-menu {
-    background-color: #260906;
-  }
-
-  .dropdown-menu.show {
-    padding-top: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 
   .dropdown {
     padding: 0.5rem;
@@ -65,9 +92,16 @@ header {
     background-color: none;
   }
 
+  a.dropdown-item {
+    padding: 0.5rem;
+    text-wrap: none;
+  }
+
   a.dropdown-item:hover {
-    background-color: #45110C;
+    color: #260906;
+    background-color: #ef3b2d;
+    padding: 0.5rem;
+    border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
   }
 
 }
-
