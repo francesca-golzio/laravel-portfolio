@@ -26,7 +26,7 @@ body.admin_style {
     background-color: #ef3b2d;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 0.25px solid #260906;
+    border: 2px double #260906;
     border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
     margin-bottom: 0.25rem;
   }
@@ -56,11 +56,10 @@ body.admin_style {
   button.navbar-toggler {
 
     color: #260906;
+    font-weight: 600;
     background-color: #ef3b2d;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     padding: 0.5rem;
-    border: 0.5px solid #260906;
+    border: 3px dashed #260906;
     border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
 
   }
