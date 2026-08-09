@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-/* _ ADMIN _ */
+/* _ ADMIN LAYOUT _ */
 
 body.admin_style {
   color: #fbdfde;
@@ -8,12 +8,13 @@ body.admin_style {
   background-color: #260906;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   transition: all 0.5s ease-in-out;
-
 }
 
-header {
+.admin_header {
   margin-bottom: 2rem;
 }
 
@@ -21,11 +22,11 @@ header {
   color: #ef3b2d;
 
   a#navbarDropdown {
-    color: #ef3b2d;
-    background-color: #260906e6;
+    color: #260906;
+    background-color: #ef3b2d;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 0.25px solid #ef3b2d;
+    border: 0.25px solid #260906;
     border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
     margin-bottom: 0.25rem;
   }
@@ -54,12 +55,12 @@ header {
 
   button.navbar-toggler {
 
-    color: #ef3b2d;
-    background-color: #260906e6;
+    color: #260906;
+    background-color: #ef3b2d;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     padding: 0.5rem;
-    border: 0.5px solid #ef3b2d;
+    border: 0.5px solid #260906;
     border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
 
   }
@@ -109,4 +110,49 @@ header {
     border-radius: 15px 20px 25px 20px / 20px 30px 15px 35px;
   }
 
+}
+
+.admin_main {
+  flex-grow: 1;
+}
+
+.admin_footer {
+  color: #ef3b2d;
+  background-color: #260906e6;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  .container {
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: bottom;
+
+    nav {
+
+      ul {
+        list-style: none;
+        font-size: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.25rem 0.75rem;
+      }
+
+      a {
+        color: #fbdfde;
+        text-decoration: none;
+      }
+
+    }
+  }
 }

@@ -14,7 +14,7 @@
 </head>
 <body class="admin_style">
     
-    <header>
+    <header class="admin_header">
         <nav class="navbar admin_navbar navbar-expand-md" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
@@ -37,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/admin') }}">Admin Dashboard</a>
+                            <a class="nav-link" href="{{url('/admin') }}"><h2>Admin Dashboard</h2></a>
                         </li>
                     </ul>
 
@@ -49,7 +49,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right dropdown_menu" aria-labelledby="navbarDropdown">
-                                <a class="nav-link dropdown-item" href="{{url('/admin') }}">Admin Dashboard</a>
+                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}">Admin Dashboard</a>
                                 <div class="dropdown_header">Projects</div>
                                 <a class="nav-link dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
                                 <a class="nav-link dropdown-item" href="#">New Project</a>
@@ -71,11 +71,24 @@
         </nav>
   </header>
 
-  <main>
+  <main class="admin_main">
     <div class="container">
         @yield('content')
     </div>
   </main>
+
+  <footer class="admin_footer">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
+                <li><a href="{{ url('admin/projects') }}">All Projects</a></li>
+                <li><a href="#">New Project</a></li>
+                <li><a href="{{ url('/') }}">Exit Admin Area</a></li>
+            </ul>
+        </nav>        
+    </div>
+  </footer>
 
 </body>
 </html>
