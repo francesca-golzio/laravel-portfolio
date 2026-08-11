@@ -40,6 +40,10 @@ body.admin_style {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-top: 0.5rem;
+
+    i {
+      padding-right: 0.5rem;
+    }
   }
 
   .dropdown-menu.show {

@@ -49,10 +49,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right dropdown_menu" aria-labelledby="navbarDropdown">
-                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}">Admin Dashboard</a>
+                                <div class="dropdown_header">Admin</div>
+                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}"><i class="bi bi-columns-gap"></i>Dashboard</a>
+                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}"><i class="bi bi-box-arrow-up-right"></i>Exit Admin Area</a>
                                 <div class="dropdown_header">Projects</div>
-                                <a class="nav-link dropdown-item" href="{{ url('admin/projects') }}">All Projects</a>
-                                <a class="nav-link dropdown-item" href="#">New Project</a>
+                                <a class="nav-link dropdown-item" href="{{ url('/projects') }}"><i class="bi bi-list-ul"></i> All Projects</a>
+                                <a class="nav-link dropdown-item" href="#"><i class="bi bi-plus-lg"></i> New Project</a>
                                 <div class="dropdown_header" href="{{ url('dashboard') }}">Personal Profile</div>
                                 <a class="nav-link dropdown-item" href="{{ url('dashboard') }}">Dashboard</a>
                                 <a class="nav-link dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
@@ -81,10 +83,12 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="{{ url('/admin') }}">Admin Dashboard</a></li>
-                <li><a href="{{ url('admin/projects') }}">All Projects</a></li>
-                <li><a href="#">New Project</a></li>
-                <li><a href="{{ url('/') }}">Exit Admin Area</a></li>
+                <li>Admin</li>
+                <li><a href="{{ url('/admin') }}"><i class="bi bi-columns-gap"></i></a></li>
+                <li><a href="{{ url('/') }}"><i class="bi bi-box-arrow-up-right"></i></a></li>
+                <li>Projects</li>
+                <li><a href="{{ url('/projects') }}"><i class="bi bi-list-ul"></i></a></li>
+                <li><a href="#"><i class="bi bi-plus-lg"></i></a></li>
             </ul>
         </nav>        
     </div>
