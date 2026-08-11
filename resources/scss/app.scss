@@ -1,6 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
+    button {
+      appearance: none;
+      border: none;
+      outline: none;
+      color: inherit;
+      background-color: transparent;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+
+
 /* #region -- ⛔ ADMIN LAYOUT -- */
+
+.accent_color {
+  color: #ef3b2d;
+}
 
 body.admin_style {
   color: #fbdfde;
@@ -238,12 +253,12 @@ body.admin_style {
   }
 
   button {
-    appearance: none;
-    border: none;
-    outline: none;
+    // appearance: none;
+    // border: none;
+    // outline: none;
     color: #fbdfde;
     background-color: transparent;
-    cursor: pointer;
+    // cursor: pointer;
 
     .bi-arrow-up-right-circle:hover {
       color: green;
