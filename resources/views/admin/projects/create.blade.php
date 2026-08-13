@@ -13,8 +13,8 @@
   </div>
 
   <div class="mb-4">
-    <label for='title' class="form-label">Periodo</label>
-    <input type="text" name="title" id="title" class="form-control">
+    <label for='period' class="form-label">Periodo</label>
+    <input type="text" name="period" id="period" class="form-control">
   </div>
 
   <div class="mb-4">
@@ -28,8 +28,8 @@
   </div>
 
 <!--   <div class="mb-4">
-    <label for='title' class="form-label">Risorse / Allegati</label>
-    <input type="text" name="title" id="title" class="form-control">
+    <label for='#' class="form-label">Risorse / Allegati</label>
+    <input type="text" name="#" id="#" class="form-control">
   </div> -->
 
   <div class="mb-4">
