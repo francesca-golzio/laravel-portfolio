@@ -4,7 +4,9 @@
 
 @section('content')
 
-<form action="{{ route('projects.store') }}" method="POST" class="form container">
+<div class="container"></div>
+
+<form action="{{ route('projects.store') }}" method="POST" class="form p-4 rounded bg_dark_transparent accent_box_shadow">
   @csrf
 
   <div class="mb-3">
@@ -13,13 +15,18 @@
   </div>
 
   <div class="mb-4">
+    <label for='client' class="form-label">Cliente</label>
+    <input type="text" name="client" id="client" class="form-control">
+  </div>
+  
+  <div class="mb-4">
     <label for='period' class="form-label">Periodo</label>
     <input type="text" name="period" id="period" class="form-control">
   </div>
 
   <div class="mb-4">
-    <label for='client' class="form-label">Cliente</label>
-    <input type="text" name="client" id="client" class="form-control">
+    <label for='tags' class="form-label">Tags</label>
+    <input type="text" name="tags" id="tags" class="form-control">
   </div>
 
   <div class="mb-4">
@@ -27,14 +34,11 @@
     <textarea name="description" id="description" rows="3"class="form-control"></textarea>
   </div>
 
-<!--   <div class="mb-4">
-    <label for='#' class="form-label">Risorse / Allegati</label>
-    <input type="text" name="#" id="#" class="form-control">
-  </div> -->
+  <!-- Campo Risorse e Allegati ?? --> 
 
   <div class="mb-4">
     <label for='personal_note' class="form-label">Note private</label>
-    <input type="text" name="personal_note" id="personal_note" class="form-control">
+    <textarea name="personal_note" id="personal_note" rows="3"class="form-control"></textarea>
   </div>
 
   <input type="submit" value="Salva" class="btn btn-outline-light">
