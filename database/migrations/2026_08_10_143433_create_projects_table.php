@@ -17,7 +17,10 @@ return new class extends Migration
             $table->string('title', 200);
             $table->string('client', 250)->nullable();
             $table->string('period', 200);
+            /* array JSON 👇 nell'attesa di studiare le relazioni tra tabelle in Laravel */
+            $table->json('tags')->nullable();
             $table->longText('description');
+            $table->longText('personal_note');
 
             $table->timestamps();
         });

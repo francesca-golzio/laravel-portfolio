@@ -18,9 +18,11 @@ class ProjectsTableSeeder extends Seeder
             $newProject = new Project();
 
             $newProject->title = $faker->sentence(3);
-            $newProject->client = $faker->name() . ' ' . $faker->lastName() . ' - ' . $faker->company();
+            $newProject->client = $faker->name() . ' ' . $faker->lastName() . ' (' . $faker->company() . ')';
             $newProject->period = $faker->monthName() . ' ' . $faker->year();
+            $newProject->tags = ['Web App', 'Back End', 'Laravel'];
             $newProject->description = "{$faker->paragraph(14)}";
+            $newProject->personal_note = "{$faker->paragraph(5)}";
 
             $newProject->save();
         }

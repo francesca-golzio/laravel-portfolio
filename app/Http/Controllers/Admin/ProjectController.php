@@ -35,11 +35,11 @@ class ProjectController extends Controller
 
         $newProject = new Project();
         $newProject->title = $data['title'];
-        $newProject->period = $data['period'];
         $newProject->client = $data['client'];
+        $newProject->period = $data['period'];
+        $newProject->tags = $data['tags'];
         $newProject->description = $data['description'];
-        //$newProject->category = $data['category'];
-        //$newProject->personal_note = $data['personal_note'];
+        $newProject->personal_note = $data['personal_note'];
 
         $newProject->save();
 
