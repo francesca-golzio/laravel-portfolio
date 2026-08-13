@@ -1,0 +1,44 @@
+@extends('layouts.admin')
+
+@section('title', 'Aggiungi un nuovo progetto')
+
+@section('content')
+
+<form action="{{ route('projects.store') }}" method="POST" class="form container">
+  @csrf
+
+  <div class="mb-3">
+    <label for='title' class="form-label">Titolo</label>
+    <input type="text" name="title" id="title" class="form-control">
+  </div>
+
+  <div class="mb-4">
+    <label for='title' class="form-label">Periodo</label>
+    <input type="text" name="title" id="title" class="form-control">
+  </div>
+
+  <div class="mb-4">
+    <label for='client' class="form-label">Cliente</label>
+    <input type="text" name="client" id="client" class="form-control">
+  </div>
+
+  <div class="mb-4">
+    <label for='description' class="form-label">Descrizione</label>
+    <textarea name="description" id="description" rows="3"class="form-control"></textarea>
+  </div>
+
+<!--   <div class="mb-4">
+    <label for='title' class="form-label">Risorse / Allegati</label>
+    <input type="text" name="title" id="title" class="form-control">
+  </div> -->
+
+  <div class="mb-4">
+    <label for='personal_note' class="form-label">Note private</label>
+    <input type="text" name="personal_note" id="personal_note" class="form-control">
+  </div>
+
+  <input type="submit" value="Salva" class="btn btn-outline-light">
+
+</form>
+
+@endsection
