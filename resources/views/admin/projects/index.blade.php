@@ -10,18 +10,18 @@
   <table class="table table-borderless projects_table">
     <thead>
       <tr>
-        <th><div>Project</div></th>
-        <th><div>Client</div></th>
-        <th><div>Period</div></th>
-        <th colspan="3"><div>Actions</div></th>
+        <th class="project_title"><div>Project</div></th>
+        <th class="project_client"><div>Client</div></th>
+        <th class="project_tags"><div>Tags</div></th>
+        <th class="project_handlers" colspan="3"><div>Actions</div></th>
       </tr>
     </thead>
     <tbody>
       @foreach ($projects as $project)
       <tr>
-        <td><div>{{ $project->title }}</div></td>
-        <td><div>{{ $project->client }}</div></td>
-        <td><div>{{ $project->period }}</div></td>
+        <td class="project_title"><div>{{ $project->title }}</div></td>
+        <td class="project_client"><div>{{ $project->client }}</div></td>
+        <td class="project_tags"><div>{{ isset($project->tags) ? implode(', ', (array) $project->tags) : '-'}}</div></td>
         <td><button><i class="bi bi-arrow-up-right-circle"></i></button></td>
         <td><button><i class="bi bi-pencil-square"></i></button></td>
         <td><button><i class="bi bi-trash3-fill"></i></button></td>

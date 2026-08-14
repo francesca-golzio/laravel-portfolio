@@ -195,125 +195,121 @@ body.admin_style {
 
 /* #region -- ✨ ADMINPROJECTS -- */
 
-  /* #region -- ✨ CREATE */
+.project_form_container {
+  max-width: 750px;
+}
 
-  .project_form_container {
-    max-width: 750px;
+/* #region -- ✨ INDEX */
+
+.table_wrapper {
+  container-type: inline-size;
+  container-name: projects_table;
+}
+
+.table.projects_table {
+  color: #fbdfde;
+  border-radius: 10px;
+  box-shadow: 0px 0px 150px -50px #ef3b2d;
+  margin: 2.5rem 0;
+
+  tr td:first-child {
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 
-  /* #endregion */
+  th {
+    color: #ef3b2d;
+    font-size: 1.25rem;
+    font-weight: 500;
 
-  /* #region -- ✨ INDEX */
-
-  .table_wrapper {
-    container-type: inline-size;
-    container-name: projects_table;
+    div {
+      padding: 0 0.5rem;
+    }
   }
 
-  .table.projects_table {
+  td {
     color: #fbdfde;
-    border-radius: 10px;
-    box-shadow: 0px 0px 150px -50px #ef3b2d;
-    margin: 2.5rem 0;
+    background-color: #260906;
 
-    tr td:first-child {
-      font-size: 1.25rem;
+    div {
+      padding: 0 0.5rem;
+    }
+  }
+
+  thead th,
+  tr:nth-child(even) td {
+
+    background-color: #1c0705;
+
+  }
+
+  tr {
+
+    th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+  }
+
+  tr:last-child {
+
+    td:first-child {
+      border-radius: 0 0 0 10px;
+    }
+
+    td:last-child {
+      border-radius: 0 0 10px 0;
+    }
+  }
+
+  tr th:first-child,
+  tr td:first-child {
+    white-space: nowrap;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  button {
+    // appearance: none;
+    // border: none;
+    // outline: none;
+    color: #fbdfde;
+    background-color: transparent;
+    // cursor: pointer;
+
+    .bi-arrow-up-right-circle:hover {
+      color: green;
       font-weight: 600;
     }
 
-    th {
-      color: #ef3b2d;
-      font-size: 1.25rem;
-      font-weight: 500;
-
-      div {
-        padding: 0 0.5rem;
-      }
+    .bi-pencil-square:hover {
+      color: goldenrod;
+      font-weight: 600;
     }
 
-    td {
-      color: #fbdfde;
-      background-color: #260906;
-
-      div {
-        padding: 0 0.5rem;
-      }
+    .bi-trash3-fill:hover {
+      color: red;
+      font-weight: 600;
     }
 
-    thead th,
-    tr:nth-child(even) td {
-
-      background-color: #1c0705;
-
-    }
-
-    tr {
-
-      th:first-child {
-        border-radius: 10px 0 0 0;
-      }
-
-      th:last-child {
-        border-radius: 0 10px 0 0;
-      }
-    }
-
-    tr:last-child {
-
-      td:first-child {
-        border-radius: 0 0 0 10px;
-      }
-
-      td:last-child {
-        border-radius: 0 0 10px 0;
-      }
-    }
-
-    tr th:first-child,
-    tr td:first-child {
-      white-space: nowrap;
-    }
-
-    i {
-      font-size: 1.5rem;
-    }
-
-    button {
-      // appearance: none;
-      // border: none;
-      // outline: none;
-      color: #fbdfde;
-      background-color: transparent;
-      // cursor: pointer;
-
-      .bi-arrow-up-right-circle:hover {
-        color: green;
-        font-weight: 600;
-      }
-
-      .bi-pencil-square:hover {
-        color: goldenrod;
-        font-weight: 600;
-      }
-
-      .bi-trash3-fill:hover {
-        color: red;
-        font-weight: 600;
-      }
-
-    }
   }
+}
 
-  /* #endregion */
+/* #endregion */
 
-  /* #region MEDIA QUERIES */
+/* #region MEDIA QUERIES */
 
 /* fino a 576px */
 @container projects_table (max-width: 576px) {
 
-  /* hide PERIOD */
-  tr th:nth-child(3),
-  tr td:nth-child(3) {
+  /* hide TAGS */
+  tr th.project_tags,
+  tr td.project_tags {
     display: none;
   }
 
@@ -323,23 +319,15 @@ body.admin_style {
 @container projects_table (max-width: 765px) {
 
   /* hide CLIENT */
-  tr th:nth-child(2),
-  tr td:nth-child(2) {
+  tr th.project_client,
+  tr td.project_client {
     display: none;
   }
 
 }
 
 /* da 765px */
-@container projects_table (min-width: 765px) {
-
-  /* don't wrap PERIOD */
-  tr th:nth-child(3),
-  tr td:nth-child(3) {
-    white-space: nowrap;
-  }
-
-}
+@container projects_table (min-width: 765px) {}
 
 /* #endregion */
 
