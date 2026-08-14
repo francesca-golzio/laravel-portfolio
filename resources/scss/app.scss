@@ -193,108 +193,120 @@ body.admin_style {
 
 /* #endregion */
 
-/* #region -- ⛔✨ ADMIN PROJECTS TABLE -- */
+/* #region -- ✨ ADMINPROJECTS -- */
 
-.table_wrapper {
-  container-type: inline-size;
-  container-name: projects_table;
-}
+  /* #region -- ✨ CREATE */
 
-.table.projects_table {
-  color: #fbdfde;
-  border-radius: 10px;
-  box-shadow: 0px 0px 150px -50px #ef3b2d;
-  margin: 2.5rem 0;
-
-  tr td:first-child {
-    font-size: 1.25rem;
-    font-weight: 600;
+  .project_form_container {
+    max-width: 750px;
   }
 
-  th {
-    color: #ef3b2d;
-    font-size: 1.25rem;
-    font-weight: 500;
+  /* #endregion */
 
-    div {
-      padding: 0 0.5rem;
-    }
+  /* #region -- ✨ INDEX */
+
+  .table_wrapper {
+    container-type: inline-size;
+    container-name: projects_table;
   }
 
-  td {
+  .table.projects_table {
     color: #fbdfde;
-    background-color: #260906;
+    border-radius: 10px;
+    box-shadow: 0px 0px 150px -50px #ef3b2d;
+    margin: 2.5rem 0;
 
-    div {
-      padding: 0 0.5rem;
-    }
-  }
-
-  thead th,
-  tr:nth-child(even) td {
-
-    background-color: #1c0705;
-
-  }
-
-  tr {
-
-    th:first-child {
-      border-radius: 10px 0 0 0;
-    }
-
-    th:last-child {
-      border-radius: 0 10px 0 0;
-    }
-  }
-
-  tr:last-child {
-
-    td:first-child {
-      border-radius: 0 0 0 10px;
-    }
-
-    td:last-child {
-      border-radius: 0 0 10px 0;
-    }
-  }
-
-  tr th:first-child,
-  tr td:first-child {
-    white-space: nowrap;
-  }
-
-  i {
-    font-size: 1.5rem;
-  }
-
-  button {
-    // appearance: none;
-    // border: none;
-    // outline: none;
-    color: #fbdfde;
-    background-color: transparent;
-    // cursor: pointer;
-
-    .bi-arrow-up-right-circle:hover {
-      color: green;
+    tr td:first-child {
+      font-size: 1.25rem;
       font-weight: 600;
     }
 
-    .bi-pencil-square:hover {
-      color: goldenrod;
-      font-weight: 600;
+    th {
+      color: #ef3b2d;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      div {
+        padding: 0 0.5rem;
+      }
     }
 
-    .bi-trash3-fill:hover {
-      color: red;
-      font-weight: 600;
+    td {
+      color: #fbdfde;
+      background-color: #260906;
+
+      div {
+        padding: 0 0.5rem;
+      }
     }
 
+    thead th,
+    tr:nth-child(even) td {
+
+      background-color: #1c0705;
+
+    }
+
+    tr {
+
+      th:first-child {
+        border-radius: 10px 0 0 0;
+      }
+
+      th:last-child {
+        border-radius: 0 10px 0 0;
+      }
+    }
+
+    tr:last-child {
+
+      td:first-child {
+        border-radius: 0 0 0 10px;
+      }
+
+      td:last-child {
+        border-radius: 0 0 10px 0;
+      }
+    }
+
+    tr th:first-child,
+    tr td:first-child {
+      white-space: nowrap;
+    }
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    button {
+      // appearance: none;
+      // border: none;
+      // outline: none;
+      color: #fbdfde;
+      background-color: transparent;
+      // cursor: pointer;
+
+      .bi-arrow-up-right-circle:hover {
+        color: green;
+        font-weight: 600;
+      }
+
+      .bi-pencil-square:hover {
+        color: goldenrod;
+        font-weight: 600;
+      }
+
+      .bi-trash3-fill:hover {
+        color: red;
+        font-weight: 600;
+      }
+
+    }
   }
-}
 
-/* #region MEDIA QUERIES */
+  /* #endregion */
+
+  /* #region MEDIA QUERIES */
 
 /* fino a 576px */
 @container projects_table (max-width: 576px) {
@@ -330,6 +342,5 @@ body.admin_style {
 }
 
 /* #endregion */
-
 
 /* #endregion */
