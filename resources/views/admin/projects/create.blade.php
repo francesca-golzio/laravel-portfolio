@@ -26,6 +26,7 @@
     <div class="mb-4">
       <label for='tags' class="form-label">Tags</label>
       <input type="text" name="tags" id="tags" class="form-control">
+      <small>* Separati da virgola-spazio, es. <span class="fst-italic">Web App, Back End, Laravel</span></small>
     </div>
         
     <div class="mb-4">
