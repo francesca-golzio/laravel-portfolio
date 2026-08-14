@@ -193,7 +193,18 @@ body.admin_style {
 
 /* #endregion */
 
-/* #region -- ✨ ADMINPROJECTS -- */
+/* #region -- ✨ ADMIN PROJECTS -- */
+
+.delete_project_button {
+  color: #ef3b2d;
+  border: 2px solid #ef3b2d;
+}
+
+.delete_project_button:hover {
+  color: white;
+  background-color: #ef3b2d;
+  
+}
 
 .project_form_container {
   max-width: 750px;
