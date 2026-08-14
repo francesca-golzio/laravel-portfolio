@@ -37,7 +37,7 @@ class ProjectController extends Controller
         $newProject->title = $data['title'];
         $newProject->client = $data['client'];
         $newProject->period = $data['period'];
-        $newProject->tags = $data['tags'];
+        $newProject->tags = [$data['tags']];
         $newProject->description = $data['description'];
         $newProject->personal_note = $data['personal_note'];
 
