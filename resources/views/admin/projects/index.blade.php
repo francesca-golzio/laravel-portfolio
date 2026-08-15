@@ -22,8 +22,8 @@
         <td class="project_title"><div>{{ $project->title }}</div></td>
         <td class="project_client"><div>{{ $project->client }}</div></td>
         <td class="project_tags"><div>{{ isset($project->tags) ? implode(', ', (array) $project->tags) : '-'}}</div></td>
-        <td><button><i class="bi bi-arrow-up-right-circle"></i></button></td>
-        <td><button><i class="bi bi-pencil-square"></i></button></td>
+        <td><x-show-button :project="$project" /></td>
+        <td><x-edit-button :project="$project" /></td>
         <td><button><i class="bi bi-trash3-fill"></i></button></td>
       </tr>
       @endforeach

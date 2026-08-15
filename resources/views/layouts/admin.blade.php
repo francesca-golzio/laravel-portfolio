@@ -50,15 +50,15 @@
 
                             <div class="dropdown-menu dropdown-menu-right dropdown_menu" aria-labelledby="navbarDropdown">
                                 <div class="dropdown_header">Admin</div>
-                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}"><i class="bi bi-columns-gap"></i>Dashboard</a>
-                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}"><i class="bi bi-box-arrow-up-right"></i>Exit Admin Area</a>
+                                <a class="nav-link dropdown-item" href="{{ url('/admin') }}" aria-label="Admin Dashboard"><i class="bi bi-columns-gap"></i>Dashboard</a>
+                                <a class="nav-link dropdown-item" href="{{ url('/') }}" aria-label="Back to the Main Site"><i class="bi bi-box-arrow-up-right"></i>Back to the Main Site</a>
                                 <div class="dropdown_header">Projects</div>
-                                <a class="nav-link dropdown-item" href="{{ url('/projects') }}"><i class="bi bi-list-ul"></i> All Projects</a>
-                                <a class="nav-link dropdown-item" href="#"><i class="bi bi-plus-lg"></i> New Project</a>
-                                <div class="dropdown_header" href="{{ url('dashboard') }}">Personal Profile</div>
-                                <a class="nav-link dropdown-item" href="{{ url('dashboard') }}">Dashboard</a>
-                                <a class="nav-link dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
-                                <a class="nav-link dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="nav-link dropdown-item" href="{{ url('/projects') }}" aria-label="All Projects"><i class="bi bi-list-ul"></i> All Projects</a>
+                                <a class="nav-link dropdown-item" href="{{ url('projects/create') }}" aria-label="New Project"><i class="bi bi-plus-lg"></i> New Project</a>
+                                <div class="dropdown_header" href="{{ url('dashboard') }}" aria-label="Personal Profile">Personal Profile</div>
+                                <a class="nav-link dropdown-item" href="{{ url('dashboard') }}" aria-label="Profile Dashboard">Dashboard</a>
+                                <a class="nav-link dropdown-item" href="{{ url('profile') }}" aria-label="Profile Page">{{__('Profile')}}</a>
+                                <a class="nav-link dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" aria-label="Logout">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -84,11 +84,11 @@
         <nav>
             <ul>
                 <li>Admin</li>
-                <li><a href="{{ url('/admin') }}"><i class="bi bi-columns-gap"></i></a></li>
-                <li><a href="{{ url('/') }}"><i class="bi bi-box-arrow-up-right"></i></a></li>
+                <li><a href="{{ url('/admin') }}" title="Dashboard" aria-label="Dashboard"><i class="bi bi-columns-gap"></i></a></li>
+                <li><a href="{{ url('/') }}" title="Back to the Main Site" aria-label="Back to the Main Site"><i class="bi bi-box-arrow-up-right"></i></a></li>
                 <li>Projects</li>
-                <li><a href="{{ url('/projects') }}"><i class="bi bi-list-ul"></i></a></li>
-                <li><a href="#"><i class="bi bi-plus-lg"></i></a></li>
+                <li><a href="{{ url('/projects') }}" title="All Projects" aria-label="All Projects"><i class="bi bi-list-ul"></i></a></li>
+                <li><a href="{{ url('projects/create') }}" title="New Project" aria-label="New Project"><i class="bi bi-plus-lg"></i></a></li>
             </ul>
         </nav>        
     </div>
