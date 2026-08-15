@@ -15,8 +15,7 @@
             <div class="container"><h2 class="accent_color">{{ $project->title }}</h2></div>
             <div style="white-space:nowrap">
               <x-edit-button :project="$project" />
-              <button type="button" data-bs-toggle="modal" data-bs-target="#delete_project" class="btn delete_button"><i class="bi bi-trash3-fill" title="delete"></i></button>
-               {{-- <button><i class="bi bi-toggle-on" title="unpublish"></i></button>aggiungere render e action condizionali --}}
+              <x-delete-button :project="$project" />
             </div>
           </div>
         </th>
@@ -57,31 +56,6 @@
   </table>
 </div>
 
- <!-- Modal -->
-<div class="modal fade dark" id="delete_project" tabindex="-1" aria-labelledby="delete_project_label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="delete_project_label">Vuoi davvero eliminare il progetto?</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Attenzione:<br>una volta eseguita, questa operazione non può essere annullata, non potrai tornare indietro e avrai perso il Progetto per sempre.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Annulla</button>
-        <form action="{{route('projects.destroy', $project)}}" method="POST">
-          @csrf
-          @method('DELETE')
-          <input type="submit" class="btn delete_project_button" value="Elimina definitivamente">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  
-  
-
+<x-delete-button-modal :project="$project" />
 
 @endsection

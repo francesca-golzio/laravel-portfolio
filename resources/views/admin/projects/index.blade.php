@@ -24,11 +24,15 @@
         <td class="project_tags"><div>{{ isset($project->tags) ? implode(', ', (array) $project->tags) : '-'}}</div></td>
         <td><x-show-button :project="$project" /></td>
         <td><x-edit-button :project="$project" /></td>
-        <td><button><i class="bi bi-trash3-fill"></i></button></td>
+        <td><x-delete-button :project="$project" /></td>
       </tr>
       @endforeach
     </tbody>
   </table>
 </div>
+
+@foreach ($projects as $project)
+<x-delete-button-modal :project="$project" />
+@endforeach
 
 @endsection
