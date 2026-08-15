@@ -33,6 +33,28 @@ button {
   background-color: #260906e6;
 }
 
+.show_button,
+.edit_button,
+.delete_button {
+  color: #fbdfde;
+  background-color: transparent;
+  
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.show_button:hover,
+.edit_button:hover {
+  border-color: #ef3b2d;
+  font-weight: 600;
+}
+
+.delete_button:hover {
+  color: #260906;
+  background-color: #ef3b2d;
+}
+
 body.admin_style {
   color: #fbdfde;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0gMTAwMCAwIEMgMTA1MCAyMDAsIDEyMDAgMzUwLCAxMzUwIDQ1MCBDIDE1MDAgNTUwLCAxNjAwIDUwMCwgMTYwMCA1MDAgViAwIEggMTAwMCBaIiBmaWxsPSIjZWYzYjJkIiAvPgogICAgPHBhdGggZD0iTSAwIDQ1MCBDIDE1MCA1MDAsIDI1MCA2NTAsIDM1MCA3NTAgQyA0NTAgODUwLCA1NTAgOTAwLCA1NTAgOTAwIEggMCBWIDQ1MCBaIiBmaWxsPSIjZWYzYjJkIiAvPgo8L3N2Zz4=');
@@ -195,16 +217,6 @@ body.admin_style {
 
 /* #region -- ✨ ADMIN PROJECTS -- */
 
-.delete_project_button {
-  color: #ef3b2d;
-  border: 2px solid #ef3b2d;
-}
-
-.delete_project_button:hover {
-  color: white;
-  background-color: #ef3b2d;
-  
-}
 
 .project_form_container {
   max-width: 750px;
@@ -281,34 +293,6 @@ body.admin_style {
     white-space: nowrap;
   }
 
-  i {
-    font-size: 1.5rem;
-  }
-
-  button {
-    // appearance: none;
-    // border: none;
-    // outline: none;
-    color: #fbdfde;
-    background-color: transparent;
-    // cursor: pointer;
-
-    .bi-arrow-up-right-circle:hover {
-      color: green;
-      font-weight: 600;
-    }
-
-    .bi-pencil-square:hover {
-      color: goldenrod;
-      font-weight: 600;
-    }
-
-    .bi-trash3-fill:hover {
-      color: red;
-      font-weight: 600;
-    }
-
-  }
 }
 
 /* #endregion */
