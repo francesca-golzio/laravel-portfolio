@@ -20,6 +20,7 @@ class ProjectsTableSeeder extends Seeder
             $newProject->title = $faker->sentence(3);
             $newProject->client = $faker->name() . ' ' . $faker->lastName() . ' (' . $faker->company() . ')';
             $newProject->period = $faker->monthName() . ' ' . $faker->year();
+            $newProject->type_id = rand(1, 6);
             $newProject->tags = ['Web App', 'Back End', 'Laravel'];
             $newProject->description = "{$faker->paragraph(14)}";
             $newProject->personal_note = "{$faker->paragraph(5)}";
