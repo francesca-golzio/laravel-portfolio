@@ -15,6 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
+       //  $projects = Project::with('type')->get();
 
         return view('admin.projects.index', compact('projects'));
     }
@@ -40,6 +41,7 @@ class ProjectController extends Controller
         $newProject->title = $data['title'];
         $newProject->client = $data['client'];
         $newProject->period = $data['period'];
+        $newProject->type_id = $data['type_id'];
         $newProject->tags = [$data['tags']];
         $newProject->description = $data['description'];
         $newProject->personal_note = $data['personal_note'];
@@ -82,6 +84,7 @@ class ProjectController extends Controller
         $project->title = $data['title'];
         $project->client = $data['client'];
         $project->period = $data['period'];
+        $project->type_id = $data['type_id'];
         $project->tags = explode(',', $data['tags']);
         $project->description = $data['description'];
         $project->personal_note = $data['personal_note'];
