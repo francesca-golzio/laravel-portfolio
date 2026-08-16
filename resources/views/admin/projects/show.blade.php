@@ -12,6 +12,7 @@
       <tr class="text-center">
         <th scope="row" colspan="3">
           <div class="d-flex justify-content-between align-items-center gap-5">
+            <div class="type_badge"><i class="bi bi-bookmark-fill"></i> {{ $project->type->name }}</div>
             <div class="container"><h2 class="accent_color">{{ $project->title }}</h2></div>
             <div style="white-space:nowrap">
               <x-edit-button :project="$project" />

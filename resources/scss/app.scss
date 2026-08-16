@@ -59,9 +59,15 @@ button {
   color: #260906;
   background-color: #ef3b2d;
 }
+
 .delete_forever_button:hover {
   color: white;
   background-color: #ef3b2d;
+}
+
+.type_badge {
+  color: #fbdfde;
+  font-style: italic;
 }
 
 body.admin_style {
@@ -312,8 +318,8 @@ body.admin_style {
 @container projects_table (max-width: 576px) {
 
   /* hide TAGS */
-  tr th.project_tags,
-  tr td.project_tags {
+  tr th.type_id,
+  tr td.type_id {
     display: none;
   }
 
