@@ -21,7 +21,7 @@
       <tr>
         <td class="project_title"><div>{{ $project->title }}</div></td>
         <td class="project_client"><div>{{ $project->client }}</div></td>
-        <td class="type_id"><div>{{ $project->type->name }}</div></td>
+        <td class="type_id"><div>{{ $project->type->name ?? 'N/D' }}</div></td>
         <td><x-show-button :project="$project" /></td>
         <td><x-edit-button :project="$project" /></td>
         <td><x-delete-button :project="$project" /></td>

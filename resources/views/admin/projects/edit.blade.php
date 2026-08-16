@@ -15,10 +15,10 @@
     </div>
     
     <div class="mb-4">
-      <label for='type' class="form-label">Tipologia</label>
-      <select name="type" id="type" class="form-select">
+      <label for='type_id' class="form-label">Tipologia</label>
+      <select name="type_id" id="type_id" class="form-select">
         @foreach ($types as $type)
-        <option value="{{ $project->type_id == $type->id ? 'selected' : '' }}">{{ $type->name }}</option>
+        <option value="{{ $type->id }}" {{ $project->type_id == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
         @endforeach
       </select>
     </div>
