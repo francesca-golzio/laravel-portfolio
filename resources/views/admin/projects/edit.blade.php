@@ -13,6 +13,15 @@
       <label for='title' class="form-label">Titolo</label>
       <input type="text" name="title" id="title" value="{{ $project->title }}" class="form-control">
     </div>
+    
+    <div class="mb-4">
+      <label for='type' class="form-label">Tipologia</label>
+      <select name="type" id="type" class="form-select">
+        @foreach ($types as $type)
+        <option value="{{ $project->type_id == $type->id ? 'selected' : '' }}">{{ $type->name }}</option>
+        @endforeach
+      </select>
+    </div>
 
     <div class="mb-4">
       <label for='client' class="form-label">Cliente</label>

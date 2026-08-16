@@ -14,6 +14,16 @@
     </div>
 
     <div class="mb-4">
+      <label for='type' class="form-label">Tipologia</label>
+      <!-- <input type="text" name="type" id="type" class="form-control"> -->
+      <select name="type" id="type" class="form-select">
+        @foreach ($types as $type)
+          <option value="{{ $type->id }}">{{ $type->name }}</option>
+        @endforeach
+      </select>
+    </div>
+
+    <div class="mb-4">
       <label for='client' class="form-label">Cliente</label>
       <input type="text" name="client" id="client" class="form-control">
     </div>
