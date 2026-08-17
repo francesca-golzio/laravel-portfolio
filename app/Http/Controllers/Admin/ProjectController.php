@@ -42,7 +42,7 @@ class ProjectController extends Controller
         $newProject->client = $data['client'];
         $newProject->period = $data['period'];
         $newProject->type_id = $data['type_id'];
-        $newProject->tags = [$data['tags']];
+        $newProject->tags =  explode(',', $data['tags']);
         $newProject->description = $data['description'];
         $newProject->personal_note = $data['personal_note'];
 
