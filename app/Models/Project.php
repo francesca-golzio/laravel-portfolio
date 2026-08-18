@@ -10,7 +10,7 @@ class Project extends Model
         'tags' => 'array',
     ];
 
-    public function type() {
+    public function types() {
         return $this->belongsTo(Type::class);
     }
 
