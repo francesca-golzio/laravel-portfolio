@@ -22,6 +22,16 @@
         @endforeach
       </select>
     </div>
+    
+    <div class="mb-4 d-flex flex-wrap gap-4">
+      <label for='technologies' class="form-label">Linguaggi</label>
+      @foreach ($technologies as $technology)
+      <div class="tech me-2">
+        <input type="checkbox" name="technologies[]" id="tech-{{ $technology->id }}" value="{{ $technology->id }}" {{ $project->technologies->contains($technology->id) ? 'checked' : '' }}>
+        <label for='tech-{{ $technology->id }}' class="form-label">{{ $technology->name }}</label>
+      </div>
+      @endforeach
+    </div>
 
     <div class="mb-4">
       <label for='client' class="form-label">Cliente</label>
