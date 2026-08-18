@@ -24,6 +24,7 @@
     </div>
 
     <div class="mb-4 d-flex flex-wrap gap-4">
+      <label for='technologies' class="form-label">Linguaggi</label>
       @foreach ($technologies as $technology)
       <div class="tech me-2">
         <input type="checkbox" name="technologies[]" id="tech-{{ $technology->id }}" value="{{ $technology->id }}">
